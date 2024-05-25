@@ -7,6 +7,7 @@ const user = require('./models/user-model');
 const router = require('./Routes/createUser');
 const router1 = require('./Routes/DisplayData');
 const router2 = require('./Routes/Oderdata');
+const cors = require('cors');
 app.use((req,res,next)=>{
   res.setHeader("Access-Control-Allow-Origin","http://localhost:5173");
   res.header(
@@ -22,7 +23,7 @@ app.route('/').get((req, res) => {
 
 app.use(express.json());
 
-
+app.use(cors());
 app.use('/api',router);
 app.use('/ayush',router1);
 app.use('/ayush',router2);
