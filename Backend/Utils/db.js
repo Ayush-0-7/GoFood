@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
-let URI = "mongodb+srv://wliveat:asd_2237@cluster0.sy8dsc6.mongodb.net/gofood2?retryWrites=true&w=majority&appName=Cluster0"
-
+let URI = process.env.URI;
 const connectDB = async(req,res)=>{
     try {
         await mongoose.connect(URI);

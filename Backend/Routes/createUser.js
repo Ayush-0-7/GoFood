@@ -2,8 +2,10 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const user = require('../models/user-model');
+//Incl jwt.
 const jwt = require('jsonwebtoken');
-const secretKey = "mskdjasdmacoalnnflas21343490iot";
+const secretKey = process.env.SECRETKEY;
+//
 const {body,validationResult} = require('express-validator');
 router.route('/createuser').post(
     body('email').isEmail(),
@@ -49,13 +51,15 @@ try {
             return res.status(400).json({msg:"Invalid password."});
     
           }
+          // **
           const data = {
             user:{
                 id:userExist.id
             }
           }
         let authToken = jwt.sign(data,secretKey);
-          return res.json({success:true,authToken});
+          // 
+        return res.json({success:true,authToken});
 } catch (error) {
     console.log(error);
     res.json({success:false});
