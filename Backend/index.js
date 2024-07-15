@@ -10,7 +10,7 @@ const router1 = require('./Routes/DisplayData');
 const router2 = require('./Routes/Oderdata');
 const cors = require('cors');
 app.use((req,res,next)=>{
-  res.setHeader("Access-Control-Allow-Origin","http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Origin","https://go-food-7777.vercel.app");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With , Content-Type , Accept"
