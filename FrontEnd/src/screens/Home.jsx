@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 import Loading from "./Loading";
+import { url } from "../Urls";
 
 const Home = () => {
   const [search,setSearch] = useState("")
@@ -12,7 +13,7 @@ const Home = () => {
 
   const fetchedData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/ayush/fooddata", {
+      const response = await fetch(`https://${url}/ayush/fooddata`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

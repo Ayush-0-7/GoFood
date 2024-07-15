@@ -1,5 +1,5 @@
 import React from 'react'
-
+import city from '../images/city.jpg'
 const Carousel = () => {
   return (
     <div><div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{objectFit:"contain !important"}}>
@@ -13,14 +13,14 @@ const Carousel = () => {
                       
         </div>
       <div className="carousel-item active">
-        <img src="https://source.unsplash.com/random/300*300/?friedrice" className="d-block w-100" alt="..." style={{filter:"brightness(45%)"}}/>
+        <img src={city} alt="city" style={{filter:"brightness(45%)"}}/>
 
       </div>
       <div className="carousel-item">
-        <img src="https://source.unsplash.com/random/300*300/?tea,coffee" className="d-block w-100" alt="..."  style={{filter:"brightness(45%)"}}/>
+        <img src={city} className="d-block w-100" alt="city"  style={{filter:"brightness(45%)"}}/>
       </div>
       <div className="carousel-item">
-        <img src="https://source.unsplash.com/random/300*300/?paneer,salad" className="d-block w-100" alt="..."  style={{filter:"brightness(45%)"}}/>
+        <img src={city} className="d-block w-100" alt="..."  style={{filter:"brightness(45%)"}}/>
       </div>
     </div>
     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

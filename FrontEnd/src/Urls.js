@@ -1,0 +1,1 @@
+export const url = `go-food-hazel.vercel.app`;

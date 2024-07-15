@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdDelete } from "react-icons/md";
 import { usecart, useDispatchCart } from '../components/ContextReducer';
+import { url } from '../Urls';
 export default function Cart() {
   let data = usecart();
   let dispatch = useDispatchCart();
@@ -21,7 +22,7 @@ export default function Cart() {
     let userEmail = localStorage.getItem("UserEmail");
     console.log(userEmail);
     // console.log(data,localStorage.getItem("userEmail"),new Date())
-    let response = await fetch("http://localhost:3000/ayush/orderdata", {
+    let response = await fetch(`https://${url}/ayush/orderdata`, {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',

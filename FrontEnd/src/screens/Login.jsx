@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import Home from './Home';
+import { url } from '../Urls';
 const Login = () => {
   const [credentials,setcredentials] = useState({name:"",email:"",password:""}); 
   const [loginStatus,setLoginStatus]= useState(false);
@@ -9,7 +10,7 @@ const Login = () => {
    e.preventDefault();
    //**----------------------------
    //ThunderClient
-   const response = await fetch("http://localhost:3000/api/login",{
+   const response = await fetch(`https://${url}/api/login`,{
         method:'POST',
         headers:{
            "Content-Type":"application/json",

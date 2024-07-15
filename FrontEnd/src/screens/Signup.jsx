@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { url } from '../Urls';
 
 const Signup = () => {
     const [credentials,setcredentials] = useState({name:"",email:"",password:"",geolocation:""}); 
     const handleSubmit = async (e) => {
      e.preventDefault();
-     const response = await fetch("http://localhost:3000/api/createuser",{
+     const response = await fetch(`https://${url}/api/createuser`,{
         method:'POST',
         headers:{
            "Content-Type":"application/json",

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { url } from '../Urls';
 
 export default function MyOrder() {
 
@@ -8,7 +9,7 @@ export default function MyOrder() {
 
     const fetchMyOrder = async () => {
         console.log(localStorage.getItem('userEmail'))
-        await fetch("http://localhost:3000/ayush/myorderdata", {
+        await fetch(`https://${url}/ayush/myorderdata`, {
             // credentials: 'include',
             // Origin:"http://localhost:3000/login",
             method: 'POST',
