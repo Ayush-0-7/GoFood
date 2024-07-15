@@ -4,6 +4,10 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 import Loading from "./Loading";
 import { url } from "../Urls";
+import city from '../images/city.jpg';
+import bg1 from '../images/bg1.jpg';
+import bg2 from '../images/bg2.jpg';
+
 
 const Home = () => {
   const [search,setSearch] = useState("")
@@ -66,7 +70,7 @@ const Home = () => {
               </div>
               <div className="carousel-item active">
                 <img
-                  src="https://source.unsplash.com/random/300*300/?friedrice"
+                  src={city}
                   className="d-block w-100"
                   alt="..."
                   style={{ filter: "brightness(45%)" , objectFit:"fill"}}
@@ -74,7 +78,7 @@ const Home = () => {
               </div>
               <div className="carousel-item">
                 <img
-                  src="https://source.unsplash.com/random/300*300/?tea,coffee"
+                  src={bg1}
                   className="d-block w-100"
                   alt="..."
                   style={{ filter: "brightness(45%)", objectFit:"fill" }}
@@ -82,7 +86,7 @@ const Home = () => {
               </div>
               <div className="carousel-item">
                 <img
-                  src="https://source.unsplash.com/random/300*300/?paneer,salad"
+                  src={bg2}
                   className="d-block w-100"
                   alt="..."
                   style={{ filter: "brightness(45%)", objectFit:"fill" }}
